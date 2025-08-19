@@ -49,5 +49,8 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("server is alive!");
+}); 
 const PORT = process.env.PORT || 5003;
 server.listen(PORT, () => console.log(`🚀 Signaling server running on http://localhost:${PORT}`));
